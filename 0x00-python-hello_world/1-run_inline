@@ -1,2 +1,2 @@
 #!/bin/bash
-pyhon3 -m $PYCODE
+python3 -c $PYCODE
