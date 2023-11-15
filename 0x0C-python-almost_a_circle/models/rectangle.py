@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from base import Base
+from models.base import Base
 """class Rectangle inhherits from Base"""
 
 
@@ -18,6 +18,7 @@ class Rectangle(Base):
     def width(self):
         """getter for width"""
         return (self.__width)
+
     @width.setter
     def width(self, value):
         """setter for width"""
@@ -31,6 +32,7 @@ class Rectangle(Base):
     def height(self):
         """getter for height"""
         return (self.__height)
+
     @height.setter
     def height(self, value):
         """setter for height"""
@@ -44,6 +46,7 @@ class Rectangle(Base):
     def x(self):
         """getter for x"""
         return (self.__x)
+
     @x.setter
     def x(self, value):
         """setter for x"""
@@ -57,6 +60,7 @@ class Rectangle(Base):
     def y(self):
         """getter for y"""
         return (self.__y)
+
     @y.setter
     def y(self, value):
         """setter for y"""
@@ -65,26 +69,3 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-if __name__ == "__main__":
-
-    try:
-        Rectangle(10, "2")
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        r = Rectangle(10, 2)
-        r.width = -10
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        r = Rectangle(10, 2)
-        r.x = {}
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        Rectangle(10, 2, 3, -1)
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
