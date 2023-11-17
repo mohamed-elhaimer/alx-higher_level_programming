@@ -71,9 +71,6 @@ class Rectangle(Base):
         return (self.__width * self.__height)
 
     def display(self):
-        if (self.__width == 0 or self.__height == 0):
-            print("")
-            return
         for i in range(self.__height):
             if ( i == 0):
                 print("")
