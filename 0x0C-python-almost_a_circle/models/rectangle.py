@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """class Rectangle inhherits from Base"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -72,9 +72,11 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints to stdout the representation of the rectangle"""
+        rectangle = ""
+        print("\n" * self.y, end="")
         for i in range(self.height):
-            [print('#', end='') for j in range(self.width)]
-            print("")
+            rectangle += (" " * self.x) + ("#" * self.width) + "\n"
+        print(rectangle, end="")
 
     def __str__(self):
         """ Overwritting the str method"""
