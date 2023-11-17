@@ -75,6 +75,10 @@ class Rectangle(Base):
             print("")
             return
         for i in range(self.__height):
+            if ( i == 0):
+                print("")
             for j in range(self.__width):
                 print('#', end='')
             print("")
+            if (i == self.__height - 1):
+                print("")
