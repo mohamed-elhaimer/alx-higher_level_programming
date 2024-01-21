@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 
 meta = MetaData()
-Base = declarative_base(metaData=meta)
+Base = declarative_base(metadata=meta)
 
 
 class state(Base):
