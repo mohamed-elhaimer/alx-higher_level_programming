@@ -17,4 +17,4 @@ if __name__ == "__main__":
     session = Session()
     data = session.query(State).filter(State.name.like("%a%")).all()
     for state in data:
-        print(str(data.id), data.name, sep=": ")
+        print(str(state.id), state.name, sep=": ")
