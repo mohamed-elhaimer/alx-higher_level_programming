@@ -2,6 +2,7 @@
 """
 create table classe city
 """
+from relationship_state import Base
 from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
