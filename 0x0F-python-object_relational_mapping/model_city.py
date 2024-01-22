@@ -3,12 +3,14 @@
 create table classe city
 """
 from model_state import Base
-from sqlalchemy import Integer, String, ForeignKey, column
+from sqlalchemy import Column, Integer, String, ForeignKey
 
 
 class City(Base):
-    """ id and name of cities"""
-    __tablename__ = "cities"
-    id = column(Integer, unique=True, nullable=False, primary_key=True)
-    name = column(String(128), nullable=False)
-    state_id = column(Integer, ForeignKey('states.id'), nullable=False)
+    """
+    class city(id,name)
+    """
+    __tablename__ = 'cities'
+    id = Column(Integer, nullable=False, primary_key=True, unique=True)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
