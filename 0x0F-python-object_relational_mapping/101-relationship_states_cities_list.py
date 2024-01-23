@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     data = session.query(State).order_by(State.id)
     for state in data:
-        print(str(state.id), state.name, sep=": ")
+        print(str(state.id) + ": " + state.name)
         for city in state.cities:
             print(" ", end="")
-            print(str(City.id), City.name, sep=": ")
+            print(str(City.id) + ": " + City.name)
