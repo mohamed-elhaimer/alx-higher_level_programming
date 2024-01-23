@@ -22,5 +22,5 @@ if __name__ == "__main__":
     for state in data:
         print(str(state.id) + ": " + state.name)
         for city in state.cities:
-            print(" ", end="")
+            print("    ", end="")
             print(str(City.id) + ": " + City.name)
