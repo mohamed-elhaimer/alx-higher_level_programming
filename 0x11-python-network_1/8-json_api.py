@@ -9,15 +9,17 @@ import requests
 
 
 if __name__ == "__main__":
-    data = {'q': sys.argv[1]}
-    if data['q'] is None:
-        data['q'] = ""
+    if len(sys.argv) == 2:
+        data = {'q': sys.argv[1]}
+    elif sys.argv[1] is None:
+        data = {'q': ""}
     r = requests.post('http://0.0.0.0:5000/search_user', data)
     try:
         res = r.json()
-        if len(res) == 0 and 'id' not in res and 'name' not in res:
+        id, name = res.get('id'), res.get('name')
+        if len(res) == 0 or not id or not name:
             print("No result")
         else:
-            print("[{}] {}".format(res['id'], res['name']))
-    except ValueError:
+            print("[{}] {}".format(id, name))
+    except:
         print("Not a valid JSON")
