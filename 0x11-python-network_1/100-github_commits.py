@@ -11,7 +11,6 @@ if __name__ == "__main__":
         sys.argv[2], sys.argv[1])
     req = requests.get(url)
     data = req.json()
-    print(data)
     try:
         for i in range(10):
             print('{}: {}'.format(data[i].get("sha"),
