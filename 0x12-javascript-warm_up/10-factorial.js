@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/node
+#!/usr/bin/node
 function factorial (n) {
   let p = 1;
   for (let i = 1; i <= n; i++) {
