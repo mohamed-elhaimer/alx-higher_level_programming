@@ -1,2 +1,2 @@
-#!/opt/homebrew/bin/node
+#!/usr/bin/node
 myVar = 333;
