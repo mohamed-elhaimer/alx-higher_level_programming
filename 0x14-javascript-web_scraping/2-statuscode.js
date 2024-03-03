@@ -1,7 +1,5 @@
 #!/usr/bin/node
-fetch(process.argv[2], {
-  method: 'GET'
-})
-  .then(response => {
-    console.log('code: ', response.status);
-  });
+const request = require('request');
+request.get(process.argv[2]).on('response', function (response) {
+  console.log('code: ', response.statusCode);
+});
