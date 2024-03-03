@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/node
+#!/usr/bin/node
 fetch(process.argv[2], {
   method: 'GET'
 })
