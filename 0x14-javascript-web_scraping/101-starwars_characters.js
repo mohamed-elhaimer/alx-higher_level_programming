@@ -11,7 +11,7 @@ function printCh (data, index) {
   req(data[index], function (error, response, body) {
     if (!error) {
       console.log(JSON.parse(body).name);
-      if (index + 1 < data.lenght) {
+      if (index + 1 < data.length) {
         printCh(data, index + 1);
       }
     }
